@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CryptoHub Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/ethers@6.6.0/dist/ethers.min.js"></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Welcome to CryptoHub</h1>
+    <button onclick="logout()">Logout</button>
+
+    <hr>
+
+    <h2>Connect Wallet</h2>
+    <button onclick="connectWallet()">Connect MetaMask</button>
+    <p id="walletDisplay"></p>
+
+    <hr>
+
+    <h2>Deposit ETH</h2>
+    <input id="depositAmount" placeholder="Amount in ETH">
+    <button onclick="deposit()">Deposit</button>
+
+    <h2>Withdraw ETH</h2>
+    <input id="withdrawAmount" placeholder="Amount in ETH">
+    <button onclick="withdraw()">Withdraw</button>
+
+    <hr>
+
+    <h2>Invest</h2>
+    <input id="investAmount" placeholder="Amount in ETH">
+    <button onclick="invest()">Invest</button>
+
+    <hr>
+
+    <h2>P2P Escrow</h2>
+
+    <h3>Create Escrow</h3>
+    <input id="seller" placeholder="Seller address">
+    <input id="escrowAmount" placeholder="Amount in ETH">
+    <button onclick="createEscrow()">Create Escrow</button>
+
+    <h3>Fund Escrow</h3>
+    <input id="fundId" placeholder="Escrow ID">
+    <button onclick="fundEscrow()">Fund</button>
+
+    <h3>Release Escrow</h3>
+    <input id="releaseId" placeholder="Escrow ID">
+    <button onclick="releaseEscrow()">Release</button>
+
+    <h3>Refund Escrow</h3>
+    <input id="refundId" placeholder="Escrow ID">
+    <button onclick="refundEscrow()">Refund</button>
+  </div>
+</body>
+</html>
